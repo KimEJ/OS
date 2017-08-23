@@ -13,6 +13,7 @@ $ xcode-select --install
 Homebrew는 macOS 용 패키지 관리자이다. nasm, qemu 모두 Homebrew를 통해 설치할 수 있다.
 ```
 $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 ```
 버전 확인
 ```  

@@ -1,4 +1,4 @@
-all: BootLoader Disk.img
+all: BootLoader Disk.img LunchBootLoader
 
 
 BootLoader:
@@ -18,6 +18,11 @@ Disk.img: 00.BootLoader/BootLoader.bin
 	cp 00.BootLoader/BootLoader.bin Disk.img
 	@echo
 	@echo ======================= All Build Complete =======================
+	@echo
+
+LunchBootLoader:
+	@echo
+	@qemu-system-x86_64 -m 64 -fda ./Disk.img -localtime -M pc
 	@echo
 
 clean:
